@@ -23,11 +23,13 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
     private  ModelClass modelClass;
     private ClickListener clickListener;
 
-    //Methods for Recycleview
+    //Methods for Recycleview Taskadapter
     @NonNull
     @Override
-    public TaskAdapter.TaskViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+    public TaskViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        LayoutInflater inflater= LayoutInflater.from(parent.getContext())  ;
+        View view= inflater.inflate(R.layout.singlerow,parent,false);
+        return new TaskViewholder(view);  
     }
 
     @Override
@@ -37,7 +39,7 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mclass.size();
     }
 
     //Interface to perform click operations
