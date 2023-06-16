@@ -23,6 +23,12 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
     private  ModelClass modelClass;
     private ClickListener clickListener;
 
+    //constructor for context and ModelClass
+    public  TaskAdapter(Context context, ArrayList<ModelClass>mclass) {
+        this.mclass= mclass;
+        this.mContext = context;
+    }
+
     //Methods for Recycleview Taskadapter
     @NonNull
     @Override
@@ -33,8 +39,46 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TaskAdapter.TaskViewholder holder, int position) {
+    public void onBindViewHolder(@NonNull TaskViewholder holder, @SuppressLint("RecyclerView") int position) {
+        //Binding all the input data
+        holder.tx1.setText(mclass.get(position).getDate());
+        holder.tx2.setText(mclass.get(position).getSystolic());
+        holder.tx3.setText(mclass.get(position).getDiastolic());
+        holder.tx4.setText(mclass.get(position).getBloodPressure());
+        //delete button
+        holder.deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int position = holder.getAdapterPosition();
+                clickListener.onDeleteClick(position);
+            }
+        });
+        //edit button
+        holder.editButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                clickListener.onEditClick(position);
 
+            }
+        });
+        //Detail Button
+        holder.cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                clickListener.DetailClick(position);
+
+            }
+        });
+        modelClass = mclass.get(position);
+        //Setting color according to bad or good records
+        if (Integer.parseInt(modelClass.getDiastolic())>60 && (Integer.parseInt(modelClass.getDiastolic())<90))holder.tx3.setTextColor(Color.parseColor("#05ED98"));
+        else holder.tx3.setTextColor(Color.parseColor("#d80000"));
+
+        if (Integer.parseInt(modelClass.getSystolic())>90 &&( Integer.parseInt(modelClass.getSystolic())<140)) holder.tx2.setTextColor(Color.parseColor("#05ED98"));
+        else holder.tx2.setTextColor(Color.parseColor("#d80000"));
+
+        if (Integer.parseInt(modelClass.getBloodPressure())>60 && Integer.parseInt(modelClass.getBloodPressure())<100) holder.tx4.setTextColor(Color.parseColor("#05ED98"));
+        else holder.tx4.setTextColor(Color.parseColor("#d80000"));
     }
 
     @Override
