@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity {
         button=findViewById(R.id.AddBUttonId);
 
         retrieveData();  //method to retrieve data using sharedpreference
-        
+
+        /**
+         * This is OnClickListener for add button
+         */
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -48,7 +51,10 @@ public class MainActivity extends AppCompatActivity {
         adapter =new TaskAdapter(MainActivity.this, RecordList.mcl);
         recyclerView1.setAdapter(adapter);   //getting the recyclerview ready
 
-        adapter.setClickListener(new TaskAdapter.ClickListener(){  //work inside the recycleview
+        /**
+         * Click listener for each record in the list
+         */
+        adapter.setClickListener(new TaskAdapter.ClickListener(){
             @Override
             public void customOnClick(int position, View v) {
 
@@ -59,6 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            /**
+             * This is OnClickListener for delete button
+             */
             @Override
             public void onDeleteClick(int position) {  //clicking the delete button
                 new RecordList().deleteRecord(position);
@@ -67,12 +76,18 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this,"Delete Successful",Toast.LENGTH_SHORT).show();
             }
 
+            /**
+             * This is OnClickListener for edit button
+             */
             public void onEditClick(int position) {  //clicking the update button
                 Intent intent = new Intent(MainActivity.this, UpdateActivity.class);
                 intent.putExtra("index",position);
                 startActivity(intent);
             }
 
+            /**
+             * This is OnClickListener for detail button
+             */
             @Override
             public void DetailClick(int position){  //just clicking the item for details
                 Intent intent1= new Intent(MainActivity.this,Details_Activity.class);
@@ -82,7 +97,10 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void saveData() {   //save data and passing
+    /**
+     * This is method is for converting information in JSON format and storing them
+     */
+    private void saveData() {
         sharedPreferences = getSharedPreferences("project",MODE_PRIVATE);
         editor = sharedPreferences.edit();
         gson = new Gson();
@@ -91,7 +109,9 @@ public class MainActivity extends AppCompatActivity {
         editor.apply();
     }
 
-    //for getting the stored data
+    /**
+     * This is method is for retrieving information from JSON format and converting them to original form
+     */
     private void retrieveData() {
         sharedPreferences = getSharedPreferences("project",MODE_PRIVATE);
         gson = new Gson();

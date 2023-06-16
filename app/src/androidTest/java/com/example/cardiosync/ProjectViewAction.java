@@ -7,7 +7,11 @@ import androidx.test.espresso.ViewAction;
 
 import org.hamcrest.Matcher;
 
-public class ProjectViewAction {  //used for doing the internal actions for each record inside recordlist
+/**
+ * This method is used for doing the internal actions for each record inside recordlist in the UI Test
+ *
+ */
+public class ProjectViewAction {  //
 
     public static ViewAction clickChildViewWithId(final int id) {
         return new ViewAction() {

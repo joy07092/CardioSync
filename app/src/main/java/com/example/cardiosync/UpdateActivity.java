@@ -47,6 +47,9 @@ public class UpdateActivity extends AppCompatActivity {
         heartRateET.setText(modelClass.getBloodPressure());
         commentET.setText(modelClass.getComment());
 
+        /**
+         * This is OnClickListener for update button
+         */
         updateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,6 +59,9 @@ public class UpdateActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * This is method for checking input format of the user record and adding it to list
+     */
     private void inputFormat() {
         date = dateET.getText().toString();
         time = timeET.getText().toString();
@@ -116,6 +122,9 @@ public class UpdateActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * This method is for converting information in JSON format and storing them
+     */
     private void saveData() {
         sharedPreferences = getSharedPreferences("project",MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -125,6 +134,12 @@ public class UpdateActivity extends AppCompatActivity {
         editor.apply();
     }
 
+    /**
+     * This method is for matching the date format
+     * @param date
+     *            which is the input date
+     * @return a boolean true if the pattern is matched otherwise return false
+     */
     public boolean dateMatcher(String date){  //to match date format
 
         Pattern DATE_PATTERN = Pattern.compile(
@@ -136,6 +151,12 @@ public class UpdateActivity extends AppCompatActivity {
         return DATE_PATTERN.matcher(date).matches();
     }
 
+    /**
+     * This method is for matching the time format
+     * @param time
+     *            which is the input time
+     * @return a boolean true if the pattern is matched otherwise return false
+     */
     public boolean timeMatcher(String time){  // to match time format
 
         Pattern TIME_PATTERN = Pattern.compile(

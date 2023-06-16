@@ -28,6 +28,13 @@ public class MainActivityTest {
     @Rule
     public ActivityScenarioRule<MainActivity> mainActivityActivityScenarioRule = new ActivityScenarioRule<>(MainActivity.class);
 
+    /**
+     * This is UI test for whole the application
+     * It includes adding a new record in the list
+     * then watching the details of that record
+     * then updating that record
+     * then deleting the record
+     */
     @Test
     public void testAddButton() {
         //checking the first activity

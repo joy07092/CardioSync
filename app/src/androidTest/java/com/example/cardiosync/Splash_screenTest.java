@@ -16,6 +16,10 @@ import org.junit.runners.JUnit4;
 @RunWith(JUnit4.class)
 @LargeTest
 
+
+/**
+ * This is UI test for the Splash screen only
+ */
 public class Splash_screenTest {
     @Rule
     public ActivityScenarioRule<Splash_screen> splash_screenActivityScenarioRule = new ActivityScenarioRule<Splash_screen>(Splash_screen.class);

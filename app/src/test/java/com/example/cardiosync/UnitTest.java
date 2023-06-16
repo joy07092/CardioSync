@@ -8,6 +8,9 @@ import static org.junit.Assert.assertTrue;
 import org.junit.Test;
 
 public class UnitTest {  //mainly the methods of recordlists are being tested here
+    /**
+     * This is Unit test for adding a new record in the list
+     */
     @Test
     public void testAddRecord(){
         RecordList recordList= new RecordList();
@@ -23,6 +26,9 @@ public class UnitTest {  //mainly the methods of recordlists are being tested he
 
     }
 
+    /**
+     * This is Unit test for deleting existing record from the list
+     */
     @Test
     public void testDeleteRecord() {
         RecordList recordList = new RecordList();
@@ -55,6 +61,9 @@ public class UnitTest {  //mainly the methods of recordlists are being tested he
 
         assertThrows(IllegalArgumentException.class, () -> recordList.deleteRecord(1));
     }
+    /**
+     * This is Unit test for counting the total records in the list
+     */
     @Test
     public void testCount(){
         RecordList recordList=new RecordList();
