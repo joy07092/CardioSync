@@ -56,9 +56,44 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
     }
 
     //For holding each views
-    public class TaskViewholder extends RecyclerView.ViewHolder {
+    //class of this used for each view
+    public class TaskViewholder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
+
+        //elements of singlerow.xml is fetched
+        TextView tx1,tx2,tx3,tx4;
+        Button editButton,deleteButton;
+        CardView cardView;
+
+        //constructor
         public TaskViewholder(@NonNull View itemView) {
             super(itemView);
+
+            //finding the elements
+            tx1= itemView.findViewById(R.id.tvDate);
+            tx2= itemView.findViewById(R.id.tvDiastolic);
+            tx3=itemView.findViewById(R.id.tvSystolic);
+            tx4=itemView.findViewById(R.id.tvHeartRate);
+            editButton=itemView.findViewById(R.id.Edit_buttonId);
+            deleteButton = itemView.findViewById(R.id.DeleteBUttonId);
+            cardView= itemView.findViewById(R.id.CardView);
+
+            //item onclick setter
+            itemView.setOnClickListener(this);
+            itemView.setOnLongClickListener(this);
+        }
+
+        // implementing View.OnClickListener
+        @Override
+        public void onClick(View view) {
+            clickListener.customOnClick(getAdapterPosition(), view);
+
+        }
+        // implementing  View.OnLongClickListener
+        @Override
+        public boolean onLongClick(View view) {
+            clickListener.customOnLongClick(getAdapterPosition(), view);
+            return true;
         }
     }
+
 }
