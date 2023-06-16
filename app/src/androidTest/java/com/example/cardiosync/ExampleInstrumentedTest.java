@@ -24,3 +24,6 @@ public class ExampleInstrumentedTest {
         assertEquals("com.example.cardiosync", appContext.getPackageName());
     }
 }
+
+
+
