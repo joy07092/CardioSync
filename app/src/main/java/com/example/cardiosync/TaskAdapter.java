@@ -15,21 +15,31 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
+/**
+ * This is class is the adapter for recycleview
+ */
 public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder> {
 
-    //Adapter Components
+    /**
+     * These are the components of the adapter
+     */
     private Context mContext;
     private ArrayList<ModelClass> mclass;
     private  ModelClass modelClass;
     private ClickListener clickListener;
 
-    //constructor for context and ModelClass
+    /**
+     * This is constructor of the adapter
+     * @param context, Arraylist of record
+     */
     public  TaskAdapter(Context context, ArrayList<ModelClass>mclass) {
         this.mclass= mclass;
         this.mContext = context;
     }
 
-    //Methods for Recycleview Taskadapter
+    /**
+     * These are the must implemented methods of the adapter
+     */
     @NonNull
     @Override
     public TaskViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -40,12 +50,16 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
 
     @Override
     public void onBindViewHolder(@NonNull TaskViewholder holder, @SuppressLint("RecyclerView") int position) {
-        //Binding all the input data
+        /**
+         * Binding all the data
+         */
         holder.tx1.setText(mclass.get(position).getDate());
         holder.tx2.setText(mclass.get(position).getSystolic());
         holder.tx3.setText(mclass.get(position).getDiastolic());
         holder.tx4.setText(mclass.get(position).getBloodPressure());
-        //delete button
+        /**
+         * Defining action for delete button
+         */
         holder.deleteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,7 +67,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
                 clickListener.onDeleteClick(position);
             }
         });
-        //edit button
+        /**
+         * Defining action for edit button
+         */
         holder.editButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -61,7 +77,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
 
             }
         });
-        //Detail Button
+        /**
+         * Defining action for detail button
+         */
         holder.cardView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,7 +104,9 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
         return mclass.size();
     }
 
-    //Interface to perform click operations
+    /**
+     * Interface for click option methods
+     */
     public interface ClickListener {
         void customOnClick(int position, View v);
         void customOnLongClick(int position, View v);
@@ -95,14 +115,17 @@ public class TaskAdapter extends RecyclerView.Adapter<TaskAdapter.TaskViewholder
         void DetailClick(int position);
     }
 
-    //Setter click listener
+    /**
+     * Setter method for click listener
+     */
     public void setClickListener(ClickListener clickL)
     {
         this.clickListener = clickL;
     }
 
-    //For holding each views
-    //class of this used for each view
+    /**
+     * Class used for holding each view
+     */
     public class TaskViewholder extends RecyclerView.ViewHolder implements View.OnClickListener, View.OnLongClickListener{
 
         //elements of singlerow.xml is fetched
