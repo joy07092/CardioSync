@@ -38,9 +38,7 @@ public class DataEntry extends AppCompatActivity {
         edtx5=findViewById(R.id.timeValue);
         edtx6=findViewById(R.id.commentValue);
 
-        /**
-         * This is OnClickListener for Save button
-         */
+
         saveButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,9 +47,7 @@ public class DataEntry extends AppCompatActivity {
         });
     }
 
-    /**
-     * This is method for checking input format of the user record and adding it to list
-     */
+
     private void inputFormat() {
         //getting all inputs
         date = edtx1.getText().toString();
@@ -113,9 +109,7 @@ public class DataEntry extends AppCompatActivity {
         }
     }
 
-    /**
-     * This is method is for converting information in JSON format and storing them
-     */
+
     private void saveData() {
         sharedPreferences = getSharedPreferences("project",MODE_PRIVATE);
         editor = sharedPreferences.edit();
@@ -124,9 +118,7 @@ public class DataEntry extends AppCompatActivity {
         editor.putString("project",jsonString);
         editor.apply();
     }
-    /**
-     * This is method is for matching the date format
-     */
+
     public boolean dateMatcher(String date){
 
         Pattern DATE_PATTERN = Pattern.compile(
@@ -137,9 +129,7 @@ public class DataEntry extends AppCompatActivity {
 
         return DATE_PATTERN.matcher(date).matches();
     }
-    /**
-     * This is method is for matching the time format
-     */
+
     public boolean timeMatcher(String time){
 
         Pattern TIME_PATTERN = Pattern.compile(

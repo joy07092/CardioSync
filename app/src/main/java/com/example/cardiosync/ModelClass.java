@@ -1,8 +1,12 @@
 package com.example.cardiosync;
 
-//what will be a record look like
+/**
+ * This is class for getting and setting data in the list
+ */
 public class ModelClass {
-    //variable declaration
+    /**
+     * These are the variables that will hold the record
+     */
     String date = "";
     String time = "";
     String systolic = "";
@@ -10,6 +14,12 @@ public class ModelClass {
     String bloodPressure = "";
     String comment = "";
 
+    /**
+     * This is the Parameterized constructor of the class for assigning the variables with values
+     *
+     * @param date, time, systolic, diastolic, bloodPressure, comment
+     *              these are all the variables that hold the record
+     */
     public ModelClass(String date, String time, String systolic, String diastolic, String bloodPressure, String comment) {
         //assigning values
         this.date = date;
@@ -20,7 +30,9 @@ public class ModelClass {
         this.comment = comment;
     }
 
-    //setters and getters
+    /**
+     * These are the getter methods
+     */
     public String getDate() {
         return date;
     }
