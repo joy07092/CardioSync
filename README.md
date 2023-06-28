@@ -13,6 +13,6 @@
 ![rsz_datashow](https://github.com/joy07092/CardioSync/assets/126981963/ee6de6a1-4947-4533-8011-054f1c3ef7ae)
 
 
-* To know more about this application click [here](https://github.com/joy07092/CardioSync/wiki)
+### To know more about this application click [here](https://github.com/joy07092/CardioSync/wiki)
 
 
