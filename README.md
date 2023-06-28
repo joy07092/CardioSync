@@ -6,14 +6,13 @@ CardioSync boasts an intuitive user interface, comprehensive features, and a sea
 
 ### Some Screenshots of the app
 ![rsz_11rsz_home](https://github.com/joy07092/CardioSync/assets/126981963/47eef4b4-9776-4504-8447-6bd2fcd3dd6a)
-![rsz_dataentryform](https://github.com/joy07092/CardioSync/assets/126981963/5d3376fb-fe95-428c-9813-2d693cc8a35f)
-![rsz_dataentryconstraint-1](https://github.com/joy07092/CardioSync/assets/126981963/0fc2caea-5c03-4f40-82d9-30697ce3d85c)
-![rsz_dataentryconstrain-2](https://github.com/joy07092/CardioSync/assets/126981963/5f94db78-2efd-4da1-81a0-3d1e99128ab9)
-![rsz_dataupdateform](https://github.com/joy07092/CardioSync/assets/126981963/8953aa28-029a-4fb4-8ea5-30c90491071c)
-![rsz_datashow](https://github.com/joy07092/CardioSync/assets/126981963/ee6de6a1-4947-4533-8011-054f1c3ef7ae)
-
-
+![rsz_1dataentryform](https://github.com/joy07092/CardioSync/assets/126981963/148ac560-c97a-4643-b7e5-48a97921974e)
+![rsz_1rsz_dataentryconstraint-1](https://github.com/joy07092/CardioSync/assets/126981963/721f1248-5a22-41ec-9d08-23d3f5cbd970)
+![rsz_1rsz_dataentryconstrain-2](https://github.com/joy07092/CardioSync/assets/126981963/3ab63e4f-2665-42a3-95a1-bb570e7a045c)
+![rsz_1rsz_dataupdateform](https://github.com/joy07092/CardioSync/assets/126981963/4a3e0449-5ee8-45e6-b309-3ad40b487680)
+![rsz_1rsz_datashow](https://github.com/joy07092/CardioSync/assets/126981963/0c448603-0afb-4783-a473-31d0f4423a19)
 #### To know more about this application click [here](https://github.com/joy07092/CardioSync/wiki)
+
 
 
 
