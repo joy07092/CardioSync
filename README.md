@@ -5,7 +5,7 @@
 CardioSync boasts an intuitive user interface, comprehensive features, and a seamless user experience. It offers unparalleled capabilities to serve as your personal heart assistant, empowering you to prioritize your cardiovascular well-being.
 
 ### Some Screenshots of the app
-**Starting**![rsz_11rsz_home](https://github.com/joy07092/CardioSync/assets/126981963/47eef4b4-9776-4504-8447-6bd2fcd3dd6a)
+![rsz_11rsz_home](https://github.com/joy07092/CardioSync/assets/126981963/47eef4b4-9776-4504-8447-6bd2fcd3dd6a)
 ![rsz_1dataentryform](https://github.com/joy07092/CardioSync/assets/126981963/148ac560-c97a-4643-b7e5-48a97921974e)
 ![rsz_1rsz_dataentryconstraint-1](https://github.com/joy07092/CardioSync/assets/126981963/721f1248-5a22-41ec-9d08-23d3f5cbd970)
 ![rsz_1rsz_dataentryconstrain-2](https://github.com/joy07092/CardioSync/assets/126981963/3ab63e4f-2665-42a3-95a1-bb570e7a045c)
